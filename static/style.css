@@ -1,0 +1,37 @@
+*{
+    background-color: papayawhip;
+}
+img{
+    width: 100%;
+    height: 45%;
+}
+h1{
+    margin-top: -9%;
+    text-decoration: sans-serif;
+    color: brown;
+    text-align: center;
+    padding: 10%;
+}
+.para{
+    margin-top: -10%;
+    text-align: center;
+    color: black;
+    text-decoration: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    width: 50%;
+    margin-left: 23%;
+    font-size: 180%;
+}
+.quote{
+    margin-top: 3%;
+    text-align: center;
+    color: blue;
+    text-transform: inherit;
+    margin-left: 5%;
+    font-size: 150%;
+}
+.foot{
+    margin-top: 8%;
+    text-align: center;
+    color: red;
+}

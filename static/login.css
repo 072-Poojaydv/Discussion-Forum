@@ -1,0 +1,48 @@
+*{
+    background-image: url(2.png);
+    padding:0%;
+}
+.container{
+    align-items:center;
+    border-width: 2%;
+    border-color: red;
+    border-style: dotted;
+    width:55%;
+    margin-left:25%;
+    margin-top: 15%;
+}
+.container h1{
+    text-align: center;
+    color:blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-top: 0%;
+}
+.container.box{
+    text-align: center;
+    width:50%;
+    padding: 5px;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+}
+.inputbox input{
+    width: 97%;
+    border-bottom: black;
+    text-align: justify;
+    padding:2%;
+    color:brown;
+    
+}
+.inputbox input[type="submit"]{
+    width: 20%;
+    border-bottom: black;
+    text-align: center;
+    margin-left: 35%;
+    color:darkblue;
+}
+.alert{
+    background-color: aquamarine;
+    text-align: center;
+    color: brown;
+}

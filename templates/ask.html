@@ -1,0 +1,44 @@
+{% extends "nav.html" %}
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='ask.css') }}">
+{% block content %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+            <div class="{{ category }}" style="background-color: aquamarine;
+            text-align: center;
+            color: brown;">
+                {{ message }}
+                <button type="button" class="close" onclick="myFunction()">&times;</button>
+            </div>
+            {% endfor %}
+        {% endwith %}
+        <section class="contact">
+            <div class="content">
+                <h2 style="color: crimson; margin-left: 20%;">Ask Your Doubt</h2>
+            </div>
+            
+            <div class="contactform" style="border: darkblue; border-style: double; margin-left: 15%;margin-right: 30%;">
+                <form action = "/Ask_Questions" method="POST">
+                    <h2 style="margin-left: auto; font-style: italic;"> Doubt</h2>
+                    <div class="inputbox">
+                        <input style="border-color: green; width:50%; padding:2%;" type="email" name="Email" required="required" placeholder="Email....">
+                    </div>
+                    <div class="inputbox">
+                        <input style="border-color: green; width:50%; padding:2%; margin-top: 1%;" type="tel" name="Phone" required="required" placeholder="Mobile number...">
+                    </div>
+                    <div class="inputbox">
+                        <textarea style="border-color: green; width:50%; padding:2%; margin-top: 1%;" name ="Question" required="required" placeholder="Type your doubt...."></textarea>
+                    </div>
+                    <div class="inputbox">
+                        <input style="margin-left: 30%; align-content: center; padding:1%; margin-top: 1%;" type="Submit" name="Submit" required="required">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <script>
+            function myFunction() 
+            {
+                var msg = document.querySelector('.alert');
+                msg.remove();
+            }
+        </script>
+{% endblock %}

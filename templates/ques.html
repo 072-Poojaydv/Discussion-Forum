@@ -1,0 +1,9 @@
+{% extends "nav.html" %}
+{% block content %}
+<h1 style="color:red; font-size: medium; text-align: center; margin-top: auto;">QUESTIONS</h1>
+    {% for i in data %}
+        <ul>
+           <h3> <a style="color: black;"href="{{ url_for('answer') }}" > {{ i.id }}  --------> {{ i.question }} </a></h3>
+        </ul>
+    {% endfor %}
+{% endblock %}

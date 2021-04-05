@@ -1,0 +1,34 @@
+{% extends "nav.html" %}
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="{{ category }}" style="background-color: aquamarine;
+        text-align: center;
+        color: brown;">
+            {{ message }}
+            <button type="button" class="close" onclick="myFunction()">&times;</button>
+        </div>
+        {% endfor %}
+    {% endwith %}
+    <form action = "/Answers" method="POST">
+        <div class="inputbox" style="border: turquoise; border-style: dashed; margin-top: 5%; margin-left: auto;">
+        <h2> Type Your Anwer......</h2>
+            <textarea style="width: 50%; color: seagreen; margin-left:auto;" type ="text" name="xyz" placeholder ="Answer...(first type the number place in front of question  then your answer)">
+            </textarea>
+            <input type="submit" name= "Submit" value="Submit" style="color:black; margin-left: 5%;">
+        </div>
+    </form>
+    <script>
+        function myFunction() 
+        {
+            var msg = document.querySelector('.alert');
+            msg.remove();
+        }
+    </script>
+    <h1 style="color:red; font-size: medium; margin-left:2%; margin-top: auto;">ANSWERS</h1>
+    {% for i in d %}
+        <ul>
+            <h3 style="color: black; font-weight: 600; margin-left: 5%;" > {{ i }} </h3>
+        </ul>
+    {% endfor %}
+{% endblock %}
